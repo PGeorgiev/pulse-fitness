@@ -107,7 +107,7 @@ h6 + p {} h1 + p {
 body {
     background: #FFF;
     background: fixed;
-    width: 80%;
+    width: 100%;
     margin: 0px auto;
     padding: 0px;
 }
@@ -145,6 +145,8 @@ a {
 
 nav {
     margin: 10px 0;
+    background-color: #f63;
+    display:block;
 }
 
 nav ul {
