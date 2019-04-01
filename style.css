@@ -135,17 +135,17 @@ a {
 
 /* Custom Header */
 
-.header img {
+/*.header img {
     width: 100%;
     margin: 0px auto;
     padding: 0px;
-}
+}*/
 
 /* Navigation */
 
 nav {
     margin: 10px 0;
-    background-color: #f63;
+    background-color: black;
     display:block;
 }
 
@@ -168,10 +168,11 @@ nav a {
     text-decoration: none;
     font-family: 'Playfair Display', serif;
     text-transform: uppercase;
+    color: white;
 }
 
 nav a:hover {
-    background-color: #000000;
+    background-color: green;
     color: #CCC;
 }
 
@@ -610,3 +611,6 @@ img {
 .entry-title:hover {
     opacity: .6;
 }
+
+
+
