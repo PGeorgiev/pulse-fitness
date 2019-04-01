@@ -19,3 +19,592 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+
+* {
+ margin: 0;
+ padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body,
+form,
+select,
+input,
+textarea {
+    font: 16px/1.6 Scada, Georgia, serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2em;
+    font-weight: normal;
+    margin-bottom: 0.2em;
+}
+h1 {
+    font-size: 2.8em;
+}
+h2 {
+    font-size: 2.2em;
+}
+h3 {
+    font-size: 1.8em;
+}
+h4 {
+    font-size: 1.6em;
+}
+h5 {
+    font-size: 1.2em;
+}
+h6 {
+    font-size: 1.0em;
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
+}
+p,
+ul,
+ol {
+    padding-bottom: 1.5em;
+}
+p + h1,
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6 {
+    margin: 0.8em 0 0.2em 0;
+}
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {} h1 + p {
+    margin-top: -0.2em;
+    font-style: italic;
+}
+
+.screen-reader-text,
+.menu-toggle,
+.skip-link {
+    display: none;
+}
+
+body {
+    background: #FFF;
+    background: fixed;
+    width: 80%;
+    margin: 0px auto;
+    padding: 0px;
+}
+
+a {
+    color: black;
+}
+
+
+.site-header, .site-content {
+}
+
+.site-header {
+    padding: 0px;
+}
+
+.site-footer {
+    padding: 20px; margin-top: 20px;
+}
+
+.site-content, #main {
+    overflow: hidden;
+}
+
+
+/* Custom Header */
+
+.header img {
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px;
+}
+
+/* Navigation */
+
+nav {
+    margin: 10px 0;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li {
+    display:inline-block;
+}
+
+nav a {
+    display:block;
+    padding:0 10px;
+    font-size: 20px;
+    line-height: 60px;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    background-color: #000000;
+    color: #CCC;
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 60px; /* the height of the main nav */
+    border: 1px solid  #000000;
+    background-color: #f3f3f3;
+    color: #CCC;
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+    display:inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+    width:220px;
+    float:none;
+    display:list-item;
+    position: relative;
+}
+
+/* Second, Third and more Tiers */
+nav ul ul ul li {
+    position: relative;
+    top:-60px;
+    left:170px;
+}
+
+/* Four Tiers */
+nav ul ul ul li a {
+  display: inline-block;
+  width: 220px;
+  top: -60px;
+  left: 170px;
+  background-color: #f3f3f3;
+}
+
+/* Change this in order to change the Dropdown symbol */
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+
+}
+ol li ol li {
+    list-style-type: upper-roman;
+}
+ol li ol li ol li {
+    list-style-type: upper-alpha;
+}
+dl dt {
+    padding-bottom: 0.4em;
+}
+dl dd {
+    padding: 0 0 0.4em 0.908em;
+}
+table {
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 1.5em;
+    border: 1px solid #CCC;
+    border-spacing: 0px;
+    border-bottom-color: #FFF;
+    border-right-color: #FFF;
+}
+tbody tr:nth-child(even) td {
+    background: rgba(255, 255, 255, .2);
+}
+th,
+td {
+    padding: 0.2em 0.4em;
+    border: 1px solid #CCC;
+    border-top-color: #FFF;
+    border-left-color: #FFF;
+}
+th {
+    text-align: left;
+    background: rgba(255, 255, 255, .6);
+}
+.alignright {
+    text-align: right;
+}
+.alignleft {
+    text-align: left;
+}
+
+#primary, #secondary {
+    padding: 20px;
+    float: left;
+}
+
+#primary {
+    width: 70%;
+}
+
+#secondary {
+    width: 30%;
+}
+
+.sticky,
+.gallery-caption {
+    display: block;
+}
+.bypostauthor .comment-content p {
+    color: #2d2824;
+}
+
+.bypostauthor > .comment-body {
+    display: block;
+    position: relative;
+    padding: 1em;
+    margin-bottom: 2em;
+    background: #d6cebf;
+    border-bottom: 1px solid #e3dfd2;
+    font-size:110%;
+    border-radius: 5px;
+}
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+}
+
+.site-content,
+.comments-area,
+.post-navigation,
+.hentry + .hentry {
+    border-top: solid 1px #CCC;
+    padding-top: 2em;
+    margin-top: 2em;
+}
+
+.hentry .entry-meta { padding-bottom: 0.5em; font-style: italic; color: #999; }
+.hentry .entry-meta { color: #999; }
+.hentry .entry-meta a { color: #666; }
+.hentry .entry-meta:hover { color: #666; }
+.hentry .entry-meta:hover a { color: black; }
+
+.post-navigation {
+}
+
+.wp-caption {
+    margin-bottom: 1.5em;
+    max-width: 100%;
+    background: #d6cebf;
+}
+
+.wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin: 0 auto;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+.wp-caption-text {
+    text-align: center;
+}
+
+.wp-caption .wp-caption-text {
+    padding: 1em;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-family: 'Cuprum', sans-serif;
+}
+
+.site-footer {
+  text-align: center;
+  margin: 25px;
+  border-top: 3px solid #2d3846;
+}
+
+.site-footer a {
+  background-color: white;
+}
+
+
+.site-info p {
+    text-align: center;
+    color: black;
+    font-size: 15px;
+}
+
+.site-info a {
+    color: #222222;
+}
+
+
+.widget-title {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.cat-item {
+    list-style: none;
+}
+
+.cat-item a:hover {
+    color: #666;
+}
+
+.cat-links {
+    padding: 4px;
+}
+
+.cat-links a {
+    border-bottom: 4px solid #000000;
+    content: '|';
+}
+
+ .widget {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    margin-bottom: 48px;
+    margin-bottom: 3.428571429rem;
+    word-wrap: break-word;
+    background: #fff;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, .16);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding: 20px;
+    border: 1px solid rgb(179, 179, 179);
+}
+
+.entry-meta {
+    margin: 20px;
+}
+
+.comments-link {
+    padding: 8px;
+}
+/* Nav links */
+
+.nav-links a{
+    color: black;
+}
+
+.nav-previous {
+  float: left;
+  color: black;
+  border-bottom: 1px solid black;
+  padding-right: 5px;
+}
+
+.nav-next {
+  float: right;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+
+
+
+.search-submit {
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 100px;
+}
+
+.search-submit:hover {
+    color: #FFF;
+    background: #000000;
+    cursor: pointer;
+}
+
+#submit {
+    background-color: #000000;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit:hover {
+    opacity: .8;
+}
+
+.site-branding {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+
+
+
+/* Social Profiles */
+
+.social {
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: left;
+    background: #343434;
+    color: #ffffff;
+    border-top: 1px solid #444444;
+}
+
+.social .fa-icons {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+    float: left;
+}
+.social .fa-icons i {
+    color: #fff;
+    font-size: 17px;
+    width:30px;
+    height:30px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #999999;
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+}
+
+.social .fa-icons i:hover {
+    color: #333;
+    opacity: 0.8;
+    background: #FFF;
+    border: 1px solid #0B5063;
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+}
+
+.social .ap-cart a {
+    float: right;
+    margin: 0;
+    color: #fff;
+    padding-right: 10px;
+    line-height: 1em;
+    font-size: 0.6em;
+}
+
+.social input {
+    color: #FFFFFF !important;
+}
+
+.soc-right {
+    padding-top: 8px;
+    float: right;
+    color: #eee;
+    font-size: 13px;
+}
+
+.soc-right span {
+    padding-right: 10px;
+    padding-left: 10px;
+    border-right: 1px solid #999999;
+}
+
+
+
+/* Social  */
+
+.menu-social li a[href*="dribbble.com"]::before { content: '\f17d'; }
+.menu-social li a[href*="facebook.com"]::before { content: '\f09a'; }
+.menu-social li a[href*="flickr.com"]::before { content: '\f16e'; }
+.menu-social li a[href*="foursquare.com"]::before { content: '\f180'; }
+.menu-social li a[href*="github.com"]::before { content: '\f09b'; }
+.menu-social li a[href*="plus.google.com"]::before { content: '\f0d5'; }
+.menu-social li a[href*="instagram.com"]::before { content: '\f16d'; }
+.menu-social li a[href*="jsfiddle.com"]::before { content: '\f1cc'; }
+.menu-social li a[href*="linkedin.com"]::before { content: '\f0e1'; }
+.menu-social li a[href*="pinterest.com"]::before { content: '\f0d2'; }
+.menu-social li a[href*="reddit.com"]::before { content: '\f1a1'; }
+.menu-social li a[href*="soundcloud.com"]::before { content: '\f1be'; }
+.menu-social li a[href*="stackoverflow.com"]::before { content: '\f16c'; }
+.menu-social li a[href*="tumblr.com"]::before { content: '\f173'; }
+.menu-social li a[href*="twitter.com"]::before { content: '\f099'; }
+.menu-social li a[href*="vimeo.com"]::before { content: '\f194'; }
+.menu-social li a[href*="vine.co"]::before { content: '\f1ca'; }
+.menu-social li a[href*="yelp.com"]::before { content: '\f1e9'; }
+.menu-social li a[href*="youtube.com"]::before { content: '\f167'; }
+.menu-social li a[href*="wordpress.com"]::before { content: '\f19a'; }
+.menu-social li a[href*="wordpress.org"]::before { content: '\f19a'; }
+
+.menu-social  a:link {text-decoration: none;}
+.menu-social  a:visited {text-decoration: none;}
+.menu-social  a:hover { text-decoration: none;}
+.menu-social  a:active { text-decoration: none;}
+
+#menu-social-items {
+    margin-bottom: 0;
+}
+.menu-social {
+    padding: 0px;
+    margin-top: 0px;
+}
+
+.menu-social ul {
+    text-align: right;
+    list-style: none;
+}
+
+.menu-social ul li {
+    position: relative;
+    display:  inline-block;
+}
+
+.menu-social li a:before {
+    display: inline-block;
+    vertical-align: bottom;
+    padding: 0.5rem 0.5rem;
+    font-family: 'Fontawesome';
+    font-size: 1.6rem;
+
+    -webkit-font-smoothing: antialiased;
+    content: '\f08e';
+}
+
+.menu-social li:hover > a{
+    opacity: .6;
+}
+
+.entry-title {
+    font-family: 'Playfair Display', serif;
+}
+
+.entry-title:hover {
+    opacity: .6;
+}
