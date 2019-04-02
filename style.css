@@ -145,7 +145,7 @@ a {
 
 nav {
     margin: 10px 0;
-    background-color: black;
+    background-color: #0969A2;
     display:block;
 }
 
@@ -172,7 +172,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: green;
+    background-color: #0969A2;
     color: #CCC;
 }
 
@@ -182,8 +182,8 @@ nav ul ul {
     position: absolute;
     top: 60px; /* the height of the main nav */
     border: 1px solid  #000000;
-    background-color: #f3f3f3;
-    color: #CCC;
+    background-color: #0969A2;
+    color: white;
 }
 
 /* Display Dropdowns on Hover */
@@ -366,11 +366,13 @@ img {
 
 
 .widget-title {
-    background-color: black;
-    color: white;
+    /*background-color: #0969A2;*/
+    color: black;
     cursor: pointer;
     text-align: center;
     font-family: 'Playfair Display', serif;
+    border-bottom: 3px solid #0969A2;
+    border-width: 5px;
 }
 
 .cat-item {
